@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/textViewBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Bill Amount"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewBillAmount"
+        android:inputType="numberDecimal"
+        android:hint="Bill Amount"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewTipPercentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBillAmount"
+        android:layout_marginTop="16dp"
+        android:text="Select Tip Percentage"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTipOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTipPercentage"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton10Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%" />
+
+        <RadioButton
+            android:id="@+id/radioButton15Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%" />
+
+        <RadioButton
+            android:id="@+id/radioButton20Percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextCustomTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupTipOptions"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
+        android:hint="Custom Tip (Optional)" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCustomTip"
+        android:layout_marginTop="16dp"
+        android:text="Calculate Tip" />
+
+    <TextView
+        android:id="@+id/textViewTipAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalculate"
+        android:layout_marginTop="16dp"
+        android:text="Tip Amount: RS0.00"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewTotalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTipAmount"
+        android:layout_marginTop="8dp"
+        android:text="Total Amount: RS0.00"
+        android:textSize="18sp" />
+
+</RelativeLayout>
